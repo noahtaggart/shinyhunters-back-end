@@ -1,0 +1,55 @@
+[
+    {
+        "model": "app_api.hunt",
+        "pk":1,
+        "fields": {
+            "trainer":1,
+            "pokemon": 887,
+            "encounters": 8461,
+            "completed": 1,
+            "method": 1,
+            "game": 33,
+            "shiny_charm": 1
+            
+        }
+    },
+    {
+        "model": "app_api.hunt",
+        "pk":2,
+        "fields": {
+            "trainer":2,
+            "pokemon": 105,
+            "encounters": 9837,
+            "completed": 1,
+            "method": 1,
+            "game": 34,
+            "shiny_charm": 1
+        }
+    },
+    {
+        "model": "app_api.hunt",
+        "pk":3,
+        "fields": {
+            "trainer":3,
+            "pokemon": 54,
+            "encounters": 6740,
+            "completed": 1,
+            "method": 1,
+            "game": 31,
+            "shiny_charm": 1
+        }
+    },
+    {
+        "model": "app_api.hunt",
+        "pk":4,
+        "fields": {
+            "trainer":4,
+            "pokemon":601,
+            "encounters": 6796,
+            "completed": 1,
+            "method": 1,
+            "game": 29,
+            "shiny_charm": 1
+        }
+    }
+]

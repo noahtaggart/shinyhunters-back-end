@@ -1,0 +1,68 @@
+[
+    {
+        "model": "auth.user",
+        "pk": 1,
+        "fields": {
+            "password": "Pn8Oml9vYx9",
+            "username": "mkamiyama0",
+            "last_name": "Kamiyama",
+            "email": "mkamiyama0@nhs.uk",
+            "date_joined": "2022-04-01 12:33:12",
+            "first_name": "Miguel",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff":1,
+            "is_active":1
+
+
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 2,
+        "fields": {
+            "password": "GMMQDJR",
+            "username": "cmcmechan1",
+            "last_name": "McMechan",
+            "email": "cmcmechan1@sitemeter.com",
+            "date_joined": "2021-08-17 11:54:04",
+            "first_name": "Consuelo",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff":0,
+            "is_active":1
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 3,
+        "fields": {
+            "password": "eijPQROk",
+            "username": "sheighton2",
+            "last_name": "Heighton",
+            "email": "sheighton2@hostgator.com",
+            "date_joined": "2021-11-28 07:22:00",
+            "first_name": "Sauveur",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff":0,
+            "is_active":1
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 4,
+        "fields": {
+            "password": "ojmgvQjd",
+            "username": "fmatusevich3",
+            "last_name": "Matusevich",
+            "email": "fmatusevich3@blogs.com",
+            "date_joined": "2021-09-11 19:42:21",
+            "first_name": "Flossie",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff":0,
+            "is_active":1
+        }
+    }
+]

@@ -1,0 +1,34 @@
+[
+    {
+        "model": "app_api.trainer",
+        "pk":1,
+        "fields": {
+            "bio":"I wanna be there very best",
+            "user":1
+        }
+    },
+    {
+        "model": "app_api.trainer",
+        "pk":2,
+        "fields": {
+            "bio":"Like no one ever was",
+            "user":2
+        }
+    },
+    {
+        "model": "app_api.trainer",
+        "pk":3,
+        "fields": {
+            "bio":"To catch them is my real test",
+            "user":3
+        }
+    },
+    {
+        "model": "app_api.trainer",
+        "pk":4,
+        "fields": {
+            "bio":"To train them is my cause",
+            "user":4
+        }
+    }
+]

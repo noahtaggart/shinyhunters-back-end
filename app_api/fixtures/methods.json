@@ -1,0 +1,93 @@
+[
+    {
+        "model": "app_api.method",
+        "pk": 1,
+        "fields": {
+            "name": "Random Encounters",
+            "default_odds": 0.00024414062,
+            "shiny_charm_odds": 0.00073260073
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 2,
+        "fields": {
+            "name": "Soft Resetting",
+            "default_odds": 0.00024414062,
+            "shiny_charm_odds": 0.00073260073
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 3,
+        "fields": {
+            "name": "Soft Resetting",
+            "default_odds": 0.00024414062,
+            "shiny_charm_odds": 0.00073260073
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 4,
+        "fields": {
+            "name": "Egg Hatching",
+            "default_odds": 0.00024414062,
+            "shiny_charm_odds": 0.00073260073
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 4,
+        "fields": {
+            "name": "BDSP Poke Radar, 40 chain",
+            "default_odds": 0.0101010101,
+            "shiny_charm_odds": 0.0101010101
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 5,
+        "fields": {
+            "name": "Massive Mass Outbreak, > 10 research level",
+            "default_odds": 0.00316455696,
+            "shiny_charm_odds": 0.00316455696
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 5,
+        "fields": {
+            "name": "Massive Mass Outbreak, > 10 research level",
+            "default_odds": 0.00316455696,
+            "shiny_charm_odds": 0.00316455696
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 6,
+        "fields": {
+            "name": "Massive Mass Outbreak, 10 research level",
+            "default_odds": 0.00341296928,
+            "shiny_charm_odds": 0.00414937759
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 7,
+        "fields": {
+            "name": "Massive Mass Outbreak, Perfect research level",
+            "default_odds": 0.00390625,
+            "shiny_charm_odds": 0.00462962962
+        }
+    },
+    {
+        "model": "app_api.method",
+        "pk": 8,
+        "fields": {
+            "name": "Dynamax Adventures",
+            "default_odds": 0.00333333333,
+            "shiny_charm_odds": 0.01
+        }
+    }
+
+]
