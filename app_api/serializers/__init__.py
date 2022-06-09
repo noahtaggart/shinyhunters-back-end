@@ -1,0 +1,2 @@
+from .trainer_serializers import EmbedTrainerSerializer
+from .hunt_serializers import HuntSerializer
