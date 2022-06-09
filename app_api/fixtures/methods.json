@@ -21,9 +21,9 @@
         "model": "app_api.method",
         "pk": 3,
         "fields": {
-            "name": "Soft Resetting",
-            "default_odds": 0.00024414062,
-            "shiny_charm_odds": 0.00073260073
+            "name": "Masuda",
+            "default_odds": 0.00146484375,
+            "shiny_charm_odds": 0.001953125
         }
     },
     {
