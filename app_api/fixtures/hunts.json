@@ -7,7 +7,7 @@
             "pokemon": 887,
             "encounters": 8461,
             "completed": 1,
-            "method": 1,
+            "method": 2,
             "game": 33,
             "shiny_charm": 1
             
@@ -21,7 +21,7 @@
             "pokemon": 105,
             "encounters": 9837,
             "completed": 1,
-            "method": 1,
+            "method": 3,
             "game": 34,
             "shiny_charm": 1
         }
@@ -34,7 +34,7 @@
             "pokemon": 54,
             "encounters": 6740,
             "completed": 1,
-            "method": 1,
+            "method": 4,
             "game": 31,
             "shiny_charm": 1
         }

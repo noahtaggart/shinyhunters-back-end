@@ -11,6 +11,7 @@ djangorestframework = "*"
 django-cors-headers = "*"
 pylint-django = "*"
 requests = "*"
+django-fractions = "*"
 
 [dev-packages]
 

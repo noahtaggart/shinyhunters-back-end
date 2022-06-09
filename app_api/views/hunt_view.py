@@ -3,9 +3,8 @@ from django.db.models import Q
 from rest_framework import status
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
-from rest_framework import serializers
 from rest_framework.decorators import action
-from app_api.models import Hunt
+from app_api.models import Hunt, Following
 from app_api.serializers import HuntSerializer
 
 
@@ -18,6 +17,22 @@ class HuntView(ViewSet):
         
         serializer = HuntSerializer(hunts, many=True)
         return Response(serializer.data)
+    
+    @action(methods=['get'], detail=False)
+    def subscriptions(self, request):
+        followerId=request.auth.user.id
+        subscriptions = Following.objects.filter(follower_id = followerId)
+        
+        subscribed_hunts = []
+        
+        for subscription in subscriptions:
+            hunts = Hunt.objects.filter(trainer=subscription.trainer)
+            subscribed_hunts.append(hunts)
+            
+        serializer = HuntSerializer(hunts, many=True)
+        return Response(serializer.data)
+        
+        
     
     
     
