@@ -18,11 +18,12 @@ from django.urls import path
 from app_api.views import register_user, login_user
 from rest_framework import routers
 from django.conf.urls import include
-from app_api.views import PokeApiView, HuntView
+from app_api.views import PokeApiView, HuntView, TrainerView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'pokes', PokeApiView, 'poke')
 router.register(r'hunts', HuntView, 'hunt')
+router.register(r'trainers', TrainerView, 'trainer')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

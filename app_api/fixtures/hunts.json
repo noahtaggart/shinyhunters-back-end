@@ -51,5 +51,18 @@
             "game": 29,
             "shiny_charm": 1
         }
+    },
+    {
+        "model": "app_api.hunt",
+        "pk":5,
+        "fields": {
+            "trainer":1,
+            "pokemon":568,
+            "encounters": 2315,
+            "completed": 0,
+            "method": 5,
+            "game": 29,
+            "shiny_charm": 1
+        }
     }
 ]
