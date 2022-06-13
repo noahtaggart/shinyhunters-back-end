@@ -1,6 +1,3 @@
-from django.http import HttpResponseServerError
-from django.db.models import Q
-from rest_framework import status
 from rest_framework.viewsets import ViewSet
 from rest_framework.response import Response
 from rest_framework.decorators import action
@@ -27,14 +24,8 @@ class HuntView(ViewSet):
         
         for subscription in subscriptions:
             hunts = Hunt.objects.filter(trainer=subscription.trainer).filter(completed=True)
-            subscribed_hunts.append(hunts)
+            for hunt in hunts:
+                subscribed_hunts.append(hunt)
             
-        serializer = HuntSerializer(hunts, many=True)
+        serializer = HuntSerializer(subscribed_hunts, many=True)
         return Response(serializer.data)
-        
-        
-    
-    
-    
-    
-        
