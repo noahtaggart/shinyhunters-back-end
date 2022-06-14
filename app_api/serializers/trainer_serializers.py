@@ -33,6 +33,13 @@ class EmbedTrainerSerializer(serializers.ModelSerializer):
         model = Trainer
         fields = ('id', 'bio', 'user', 'recent_completed_hunt', 'profileImageUrl', 'is_subscribed')
         depth = 1
+
+class HuntTrainerSerializer(serializers.ModelSerializer):
+    user = EmbedUserSerializer(many=False)
+    
+    class Meta:
+        model = Trainer
+        fields = ('id', 'bio', 'user')
         
 class FollowerSerializer(serializers.ModelSerializer):
     trainer = EmbedTrainerSerializer(many=False)

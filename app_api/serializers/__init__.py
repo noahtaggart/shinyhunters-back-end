@@ -1,3 +1,4 @@
-from .trainer_serializers import EmbedTrainerSerializer, EmbedUserSerializer, FollowerSerializer
+from .trainer_serializers import EmbedTrainerSerializer, EmbedUserSerializer, FollowerSerializer, HuntTrainerSerializer
 from .hunt_serializers import EmbedHuntSerializer
 from .top_hunt_serializer import HuntSerializer
+from .method_serializer import EmbedMethodSerializer

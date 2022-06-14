@@ -5,4 +5,4 @@ class EmbedMethodSerializer(serializers.ModelSerializer):
     """JSON serializer for embedded method"""
     class Meta:
         model=Method
-        fields=('id', 'name', 'default_odds', 'shiny_charm_odds', 'default_odds_fraction', 'shiny_charm_odds_fraction')
+        fields=('id', 'name', 'default_odds_fraction', 'shiny_charm_odds_fraction')

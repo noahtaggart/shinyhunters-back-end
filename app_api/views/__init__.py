@@ -5,3 +5,6 @@ from .poke_api_view import PokeApiView
 from .hunt_view import HuntView
 from .trainer_view import TrainerView
 from .user_view import UserView
+from .pokemon_view import PokemonView
+from .method_view import MethodView
+from .game_view import GameView

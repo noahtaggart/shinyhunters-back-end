@@ -10,3 +10,4 @@ class EmbedHuntSerializer(serializers.ModelSerializer):
     class Meta:
         model = Hunt
         fields = ('id', 'pokemon', 'game', 'encounters', 'completed')
+
