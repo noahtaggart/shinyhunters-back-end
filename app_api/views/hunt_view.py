@@ -15,6 +15,7 @@ from django.core.exceptions import ValidationError
 class HuntView(ViewSet):
     
     def list(self, request):
+        
         hunts = Hunt.objects.filter(completed=True).order_by('-date_completed')
         
         serializer = HuntSerializer(hunts, many=True)
@@ -25,6 +26,11 @@ class HuntView(ViewSet):
         
         serializer = HuntSerializer(hunt, many=False)
         return Response(serializer.data)
+    
+    def destroy(self, request, pk):
+        hunt = Hunt.objects.get(pk=pk)
+        hunt.delete()
+        return Response(None, status=status.HTTP_204_NO_CONTENT)
     
     @action(methods=['get'], detail=False)
     def subscriptions(self, request):
@@ -76,7 +82,35 @@ class HuntView(ViewSet):
             
     @action(methods=['get'], detail=False)
     def user_completed(self, request):
-        hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-date_completed')
+        dexasc = self.request.query_params.get("dexasc", None)
+        pokeasc = self.request.query_params.get("pokeasc", None)
+        complete_date_asc = self.request.query_params.get("complete_date_asc", None)
+        complete_date_desc = self.request.query_params.get("complete_date_desc", None)
+        start_date_asc = self.request.query_params.get("start_date_asc", None)
+        start_date_desc = self.request.query_params.get("start_date_desc", None)
+        dexdesc = self.request.query_params.get("dexdesc", None)
+        pokedesc = self.request.query_params.get("pokedesc", None)
+        
+        
+        if dexasc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('pokemon')
+        elif dexdesc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-pokemon')
+        elif pokeasc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('pokemon__name')
+        elif complete_date_asc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('date_completed')
+        elif complete_date_desc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-date_completed')
+        elif start_date_asc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('date_started')
+        elif start_date_desc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-date_started')
+        elif pokedesc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-pokemon__name')
+        else:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-date_completed')
+        
         serializer = HuntSerializer(hunts, many=True)
         return Response(serializer.data)
     
