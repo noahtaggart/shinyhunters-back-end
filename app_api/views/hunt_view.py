@@ -85,3 +85,18 @@ class HuntView(ViewSet):
         hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=False).order_by('-date_started')
         serializer = HuntSerializer(hunts, many=True)
         return Response(serializer.data)
+    
+    @action(methods=['put'], detail=True)
+    def add_encounter(self, request, pk):
+        hunt = Hunt.objects.get(pk=pk)
+        hunt.encounters = hunt.encounters + 1
+        hunt.save()
+        return Response({'message':'encounter added'}, status=status.HTTP_204_NO_CONTENT)
+    
+    @action(methods=['put'], detail=True)
+    def complete_hunt(self, request, pk):
+        hunt = Hunt.objects.get(pk=pk)
+        hunt.completed = True
+        hunt.date_completed = datetime.now()
+        hunt.save()
+        return Response({'message':'hunt completed'}, status=status.HTTP_204_NO_CONTENT)
