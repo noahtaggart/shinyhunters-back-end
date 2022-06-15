@@ -47,15 +47,15 @@ class HuntView(ViewSet):
             Response -- JSON serialized hunt instance"""
         
         trainer = Trainer.objects.get(pk=request.auth.user.id)
-        pokemon = Pokemon.objects.get(pk=request.data['pokemon'])
         method = Method.objects.get(pk=request.data['method'])
+        pokemon = Pokemon.objects.get(pk=request.data['pokemon'])
         game = Game.objects.get(pk=request.data['game'])
         
         hunt = Hunt.objects.create(
         trainer = trainer,
-        pokemon = pokemon,
         encounters = 0,
         method = method,
+        pokemon = pokemon,
         game = game,
         shiny_charm = request.data['shiny_charm'],
         date_started = datetime.now())
