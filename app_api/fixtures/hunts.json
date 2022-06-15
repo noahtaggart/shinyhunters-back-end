@@ -7,9 +7,11 @@
             "pokemon": 887,
             "encounters": 8461,
             "completed": 1,
-            "method": 1,
+            "method": 2,
             "game": 33,
-            "shiny_charm": 1
+            "shiny_charm": 1,
+            "date_started": "2020-08-29T13:24:27.172Z",
+            "date_completed": "2022-06-14T09:35:33.172Z"
             
         }
     },
@@ -21,9 +23,11 @@
             "pokemon": 105,
             "encounters": 9837,
             "completed": 1,
-            "method": 1,
+            "method": 3,
             "game": 34,
-            "shiny_charm": 1
+            "shiny_charm": 1,
+            "date_started": "2020-08-29T13:24:27.172Z",
+            "date_completed": "2022-06-14T09:35:33.172Z"
         }
     },
     {
@@ -34,9 +38,11 @@
             "pokemon": 54,
             "encounters": 6740,
             "completed": 1,
-            "method": 1,
+            "method": 4,
             "game": 31,
-            "shiny_charm": 1
+            "shiny_charm": 1,
+            "date_started": "2020-08-29T13:24:27.172Z",
+            "date_completed": "2022-06-14T09:35:33.172Z"
         }
     },
     {
@@ -49,7 +55,24 @@
             "completed": 1,
             "method": 1,
             "game": 29,
-            "shiny_charm": 1
+            "shiny_charm": 1,
+            "date_started": "2020-08-29T13:24:27.172Z",
+            "date_completed": "2022-06-14T09:35:33.172Z"
+        }
+    },
+    {
+        "model": "app_api.hunt",
+        "pk":5,
+        "fields": {
+            "trainer":1,
+            "pokemon":568,
+            "encounters": 2315,
+            "completed": 0,
+            "method": 5,
+            "game": 29,
+            "shiny_charm": 1,
+            "date_started": "2020-08-29T13:24:27.172Z",
+            "date_completed": "2022-06-14T09:35:33.172Z"
         }
     }
 ]

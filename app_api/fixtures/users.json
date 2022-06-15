@@ -11,10 +11,8 @@
             "first_name": "Miguel",
             "last_login": null,
             "is_superuser": 0,
-            "is_staff":1,
-            "is_active":1
-
-
+            "is_staff": 1,
+            "is_active": 1
         }
     },
     {
@@ -29,8 +27,8 @@
             "first_name": "Consuelo",
             "last_login": null,
             "is_superuser": 0,
-            "is_staff":0,
-            "is_active":1
+            "is_staff": 0,
+            "is_active": 1
         }
     },
     {
@@ -45,8 +43,8 @@
             "first_name": "Sauveur",
             "last_login": null,
             "is_superuser": 0,
-            "is_staff":0,
-            "is_active":1
+            "is_staff": 0,
+            "is_active": 1
         }
     },
     {
@@ -61,8 +59,56 @@
             "first_name": "Flossie",
             "last_login": null,
             "is_superuser": 0,
-            "is_staff":0,
-            "is_active":1
+            "is_staff": 0,
+            "is_active": 1
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 5,
+        "fields": {
+            "password": "qYg5Hi7cV65Z",
+            "username": "rhayman0",
+            "last_name": "Hayman",
+            "email": "rhayman0@live.com",
+            "date_joined": "2021-09-11 19:42:21",
+            "first_name": "Ricki",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff": 0,
+            "is_active": 1
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 6,
+        "fields": {
+            "password": "AgLujzK0z",
+            "username": "kpatillo1",
+            "last_name": "Patillo",
+            "email": "kpatillo1@about.com",
+            "date_joined": "2021-09-11 19:42:21",
+            "first_name": "Kane",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff": 0,
+            "is_active": 1
+        }
+    },
+    {
+        "model": "auth.user",
+        "pk": 7,
+        "fields": {
+            "password": "Ggeba3mVlSEh",
+            "username": "bburchall2",
+            "last_name": "Burchall",
+            "email": "bburchall2@mail.ru",
+            "date_joined": "2021-09-11 19:42:21",
+            "first_name": "Bernetta",
+            "last_login": null,
+            "is_superuser": 0,
+            "is_staff": 0,
+            "is_active": 1
         }
     }
 ]

@@ -1,3 +1,4 @@
+import re
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from rest_framework.authtoken.models import Token
@@ -51,7 +52,8 @@ def register_user(request):
     )
     
     new_trainer = Trainer.objects.create(
-        user=new_user
+        user=new_user,
+        bio=request.data['bio']
     )
 
     # TODO: If you're using a model with a 1 to 1 relationship to the django user, create that object here

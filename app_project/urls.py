@@ -18,15 +18,23 @@ from django.urls import path
 from app_api.views import register_user, login_user
 from rest_framework import routers
 from django.conf.urls import include
-from app_api.views import PokeApiView, HuntView
+from app_api.views import PokeApiView, HuntView, TrainerView, UserView, PhotoView, PokemonView, MethodView, GameView
+from django.conf.urls.static import static
+from django.conf import settings
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'pokes', PokeApiView, 'poke')
 router.register(r'hunts', HuntView, 'hunt')
+router.register(r'trainers', TrainerView, 'trainer')
+router.register(r'users', UserView, 'user')
+router.register(r'photos', PhotoView, 'photo')
+router.register(r'pokemon', PokemonView, 'pokemon')
+router.register(r'methods', MethodView, 'method')
+router.register(r'games', GameView, 'game')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('register', register_user),
     path('login', login_user),
     path('', include(router.urls))
-]
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

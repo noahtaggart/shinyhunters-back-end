@@ -6,4 +6,6 @@ from .egg_group import EggGroup
 from .type import Type
 from .pokemon import Pokemon
 from .hunt import Hunt
+from .photo import Photo
+
 
