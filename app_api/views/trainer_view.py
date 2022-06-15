@@ -11,7 +11,13 @@ from app_api.serializers.trainer_serializers import EmbedTrainerSerializer, Foll
 class TrainerView(ViewSet):
     
     def list(self, request):
-        trainers = Trainer.objects.all()
+        
+        search_name = self.request.query_params.get("search_name", None)
+        
+        if search_name != None:
+            trainers = Trainer.objects.filter(user__username__contains = search_name)
+        else:
+            trainers = Trainer.objects.all()
         
         for trainer in trainers:
             trainer.is_subscribed = request.auth.user
