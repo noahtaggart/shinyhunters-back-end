@@ -7,6 +7,8 @@ from rest_framework.decorators import action
 from app_api.models import Hunt, Following, Trainer
 from app_api.serializers import HuntSerializer
 from app_api.serializers.trainer_serializers import EmbedTrainerSerializer, FollowerSerializer
+from django.contrib.auth.models import User
+
 
 class TrainerView(ViewSet):
     
@@ -29,8 +31,19 @@ class TrainerView(ViewSet):
     def retrieve(self, request, pk):
         
         trainer = Trainer.objects.get(pk=pk)
+        trainer.is_subscribed = request.auth.user
         serializer = EmbedTrainerSerializer(trainer, many=False)
         return Response(serializer.data)
+    
+    def update(self, request, pk=None):
+        trainer = Trainer.objects.get(pk=request.auth.user.id)
+        trainer.bio = request.data['bio']
+        user = request.auth.user
+        user.username = request.data['username']
+        trainer.save()
+        user.save()
+        
+        return Response({}, status=status.HTTP_204_NO_CONTENT)
     
     @action(methods=['post', 'delete'], detail=True)
     def subscribe(self, request, pk):
