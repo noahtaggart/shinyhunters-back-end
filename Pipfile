@@ -13,6 +13,8 @@ pylint-django = "*"
 requests = "*"
 django-fractions = "*"
 pillow = "*"
+gunicorn = "*"
+django-on-heroku = "*"
 
 [dev-packages]
 
