@@ -40,7 +40,7 @@ class HuntView(ViewSet):
         subscribed_hunts = []
         
         for subscription in subscriptions:
-            hunts = Hunt.objects.filter(trainer=subscription.trainer).filter(completed=True).order_by('-date_completed')
+            hunts = Hunt.objects.filter(trainer=subscription.trainer).filter(completed=True).order_by('date_completed')
             for hunt in hunts:
                 subscribed_hunts.append(hunt)
             
@@ -93,9 +93,9 @@ class HuntView(ViewSet):
         
         
         if dexasc != None:
-            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('pokemon')
-        elif dexdesc != None:
             hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('-pokemon')
+        elif dexdesc != None:
+            hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('pokemon')
         elif pokeasc != None:
             hunts = Hunt.objects.filter(trainer=request.auth.user.id).filter(completed=True).order_by('pokemon__name')
         elif complete_date_asc != None:
